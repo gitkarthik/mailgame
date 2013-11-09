@@ -11,7 +11,7 @@ import javax.persistence.OneToOne;
 @Entity
 public class PlayerRoundDetail implements Serializable {
 
-    private static final long serialVersionUID = -6309467765440528921L;
+    private static final long serialVersionUID = -6309463765440528921L;
 
     @EmbeddedId
     private PlayerRoundDetailPK id;

@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Player implements Serializable {
 
-    private static final long serialVersionUID = 6196210098321542768L;
+    private static final long serialVersionUID = 6196210038321542768L;
 
     @Id
     @Column(name = "ID")

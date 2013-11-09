@@ -17,9 +17,10 @@ import javax.persistence.TemporalType;
 @Entity
 public class Game implements Serializable {
 
-    private static final long serialVersionUID = -6258459281299646954L;
+    private static final long serialVersionUID = -6258459281399646954L;
 
     @Id
+    @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
 

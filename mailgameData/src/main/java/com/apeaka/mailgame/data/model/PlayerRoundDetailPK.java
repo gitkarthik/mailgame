@@ -8,7 +8,7 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class PlayerRoundDetailPK implements Serializable {
 
-    private static final long serialVersionUID = -1616975066720552654L;
+    private static final long serialVersionUID = -1616975066320552654L;
 
     @Column(name = "PLAYER_ID")
     private Long playerId;
