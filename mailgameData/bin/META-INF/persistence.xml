@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="mailgamePU" transaction-type="RESOURCE_LOCAL">
+
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		
+		 
+		 <class>com.apeaka.mailgame.data.model.Game</class>
+		<class>com.apeaka.mailgame.data.model.Player</class>
+		<class>com.apeaka.mailgame.data.model.PlayerRoundDetail</class>
+		<class>com.apeaka.mailgame.data.model.PlayerRoundDetailPK</class>
+		<class>com.apeaka.mailgame.data.model.Round</class>
+
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:derby:c:/databases/mailGameDb;create=true" />
+			<property name="javax.persistence.jdbc.user" value="test" />
+			<property name="javax.persistence.jdbc.password" value="test" />
+
+
+
+			<!-- Print SQL to stdout -->
+			<property name="hibernate.show_sql" value="true" />
+
+			<property name="hibernate.format_sql" value="true" />
+
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+
+
+
+		</properties>
+
+	</persistence-unit>
+</persistence> 

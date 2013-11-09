@@ -1,0 +1,135 @@
+System
+------
+
+0) the system should maintain the game, the player, the max points.
+1) the system keep track of player's card - for scoring when someone hits
+2) the system keeps track of score for all players
+3) the system informs about who won the round (instead of rest, it could be a websocket)
+4) when show, the system should freeze, and tell who is the winner, and score accordinly
+4.1) scoring should tell, if the person who showed is the real winner, or if some one else is the winner.
+5) should eliminate the device/user who has been eliminated because of the score.
+
+
+
+Admin
+-----
+
+1) Setup a game - give it a name (unique identifier), with "n" decks , "x" players , assign names, the maximum points.
+2) ask for score
+3) drop players if needed
+4) add players if needed (with specific points)
+5) start a game, start a round
+6) override a player's hand, when he/she is drops out in the middle of the game.
+ 
+
+
+Players
+-------
+0) the player should be able to join the game, providing his unique name, and the game name (provided by the admin)
+1) always presented with everyone's score
+2) in a round, should be allowed to pick cards for dropping 
+3) only when his turn, should be allowed to drop cards, and pick card from the deck / ground.
+4) only when his trun, should be allowed for show.
+5) when shows, the system takes over, and all the players are provided with the real winner, scores
+5.1)         the system should deal the new hand/round.   the device/user who has been elimintated is given the elimination message/ end of story.
+
+
+
+technology
+----------
+i am thinking of rest services, to start with web application, with buttons, and checkboxes.
+
+we are java developers, and could do it in java, and have it up and running on amazon server with tomcat for free.
+
+the alternatives
+1) would be to do in ruby and run it on some web server that supports ruby
+2) have it done using nodejs on the server side.
+3) any other alternative ?
+
+
+As for persistence, the data in play can be held in memory, or could be persisted,
+if persisted, we should pick a light database, and that has drivers for the preceding language (java, ruby, nodejs)
+
+even with database, we can go no-sql database (json - mongodb), or other, instead of sql database
+
+
+
+
+
+
+GAME
+----
+
+ID
+Game_name
+Created_by
+Created_date
+player_count
+deck_count
+max_points
+
+
+
+PLayer
+------
+Game_ID
+Player_ID
+player_name
+seating_order
+cumulative_score
+isActive?
+
+
+
+
+ROUND
+-----
+ID
+GAME_ID
+Round_Number
+dealer_order
+opener_order
+
+
+Combining the below two entities into one - RoundPlayerDetail
+
+Score
+-----
+Round_ID
+player_ID
+player_round_score
+
+
+
+Player_Round_Card
+-----------------
+player_id
+round_id
+card_1
+card_2
+card_3
+card_4
+card_5
+
+
+
+Business Logic
+--------------
+
+WIP
+
+
+
+Project Structure
+-----------------
+   
+   mailgame 
+   |	
+   |
+   |--- mailgamedata - data project
+   |
+   |--- mailgamebus  - business layer project
+   |
+   |--- mailgameweb  - web project
+
+

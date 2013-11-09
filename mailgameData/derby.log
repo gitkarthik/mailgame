@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat Nov 09 00:47:52 EST 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0142-3b66-f4ad-00000c571d20 
+on database directory C:\databases\mailGameDb with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Loaded from file:/C:/Users/Agilex01/.gradle/caches/artifacts-15/filestore/org.apache.derby/derby/10.10.1.1/jar/9f6f910f0373adc1b23c10f9b4bb151b7e7449f/derby-10.10.1.1.jar
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_38-b05
+user.dir=C:\learn\mailgame\mailgamedata
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
