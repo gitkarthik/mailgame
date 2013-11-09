@@ -1,0 +1,14 @@
+# Compiled source #
+###################
+*.class
+
+# eclipse and gradle related files #
+####################################
+.project
+.settings
+bin
+build
+.classpath
+.gradle
+
+
